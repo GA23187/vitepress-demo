@@ -20,12 +20,15 @@ hero:
 
 features:
   - icon: 🖖
-    title: 最新技术栈
-    details: 基于Vue3生态 、Vite 、Rollup 、TypeScript 、Windicss 等最新技术栈开发
+    title: Vite:The DX that can't be beat
+    details: 感受 Vite 的速度。即时服务器启动和闪电般的快速 HMR 保持快速，无论应用程序的大小
   - icon: ⚡️
-    title: 立即响应
-    details: 双进程热更新 , 代码修改快速响应 ! 不再等待 (最多等一会会 ... )
+    title: Designed to be simplicity first
+    details: 以Markdown为核心内容, 为了帮助您专注于编写并以最小的配置进行部署
   - icon: 🛠️
-    title: 快速开发
-    details: 基础配置及上下文隔离环境配置 , 封装了窗口便捷操作 , 各类工具库的初始化 , 环境变量 等
+    title: Power of Vue meets Markdown
+    details: 在Markdown中使用Vue的所有特性增强您的内容,同时能够使用 Vue 定制您的站点
+  - icon: 🚩
+    title: Fully static yet still dynamic
+    details: 用真正的 SSG + SPA 体系结构. 静态加载页, but engage users with 100% interactivity from there.
 ---
