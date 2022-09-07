@@ -58,6 +58,8 @@ https://vitepress.vuejs.org/guide/deploying
 
 ### 打包错误
 
+- [vitepress] No language registration for http
+
 ```
 / building client + server bundles...[vitepress] No language registration for http
 file: E:/code/myProject/vitepress/docs/http-protocol/05/01.md
@@ -66,10 +68,22 @@ build error:
  Error: No language registration for http
     at getGrammar (E:\code\myProject\vitepress\node_modules\shiki\dist\index.js:2213:13)
 ```
-- shiki 定位发现是这个的问题
+> shiki 定位发现是这个的问题
+
  ```
   ```http 
   http://www.chrono.com/18-2
   ```
  ```
 
+- [vitepress] One or more pages contain dead links.
+
+```
+(!) Found dead link ./01/index in file E:/code/myProject/vitepress/docs/http-protocol/README.md
+If it is intended, you can use:
+    <a href="./01/index" target="_blank" rel="noreferrer">./01/index</a>
+\ building client + server bundles...[vitepress] One or more pages contain dead links.
+✖ building client + server bundles...
+```
+
+这个md文件中的地址是个相对路径，生成的地址在项目中不存在
