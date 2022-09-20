@@ -1,6 +1,8 @@
 import { defineConfig } from 'vitepress'
 import { version } from '../../package.json'
 import sidebarHttpProtocol from './sidebarHttpProtocol'
+import sidebarFrontSpec from './sidebarFrontSpec'
+import sidebarJavascriptDesignModel from './sidebarJavascriptDesignModel'
 
 export default defineConfig({
   title: 'vitepress-demo',
@@ -43,6 +45,8 @@ export default defineConfig({
         },
       ],
       '/http-protocol/': sidebarHttpProtocol(),
+      '/front-spec/': sidebarFrontSpec(),
+      '/javascript-design-model/': sidebarJavascriptDesignModel(),
     },
   },
 })
@@ -53,6 +57,16 @@ function nav() {
       text: '透视 HTTP 协议',
       link: '/http-protocol/',
       activeMatch: '/http-protocol/',
+    },
+    {
+      text: '前端规范',
+      link: '/front-spec/',
+      activeMatch: '/front-spec',
+    },
+    {
+      text: '设计模式',
+      link: '/javascript-design-model/',
+      activeMatch: '/javascript-design-model',
     },
     {
       text: '关于',
