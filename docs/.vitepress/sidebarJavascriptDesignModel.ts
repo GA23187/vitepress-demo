@@ -75,6 +75,50 @@ export default () => {
           text: '18 发布-订阅模式：去 adadis 买鞋',
           link: '/javascript-design-model/published-subscribe-mode.md',
         },
+        {
+          text: '19 策略模式：给螺丝刀换刀头',
+          link: '/javascript-design-model/strategy-mode.md',
+        },
+        {
+          text: '20 状态模式：交通灯',
+          link: '/javascript-design-model/state-mode.md',
+        },
+        {
+          text: '21 模板方法模式：咖啡厅制作咖啡',
+          link: '/javascript-design-model/template-method-mode.md',
+        },
+        {
+          text: '22 迭代器模式：银行的点钞机',
+          link: '/javascript-design-model/iterator-mode.md',
+        },
+        {
+          text: '23 命令模式：江湖通缉令',
+          link: '/javascript-design-model/command-mode.md',
+        },
+        {
+          text: '24 职责链模式：领导，我想请个假',
+          link: '/javascript-design-model/chain-of-responsibility-mode.md',
+        },
+        {
+          text: '25 中介者模式：找媒人介绍对象',
+          link: '/javascript-design-model/mediator-mode.md',
+        },
+        {
+          text: '26 MVC、MVP、MVVM',
+          link: '/javascript-design-model/MVC-MVP-MVVM.md',
+        },
+        {
+          text: '27 模块模式',
+          link: '/javascript-design-model/module-mode.md',
+        },
+        {
+          text: '28 链模式',
+          link: '/javascript-design-model/chain-mode.md',
+        },
+        {
+          text: '29 中间件',
+          link: '/javascript-design-model/middleware.md',
+        },
       ],
     },
   ]
