@@ -3,6 +3,7 @@ import { version } from '../../package.json'
 import sidebarHttpProtocol from './sidebarHttpProtocol'
 import sidebarFrontSpec from './sidebarFrontSpec'
 import sidebarJavascriptDesignModel from './sidebarJavascriptDesignModel'
+import sidebarSummary from './sidebarSummary'
 
 export default defineConfig({
   title: 'vitepress-demo',
@@ -47,12 +48,18 @@ export default defineConfig({
       '/http-protocol/': sidebarHttpProtocol(),
       '/front-spec/': sidebarFrontSpec(),
       '/javascript-design-model/': sidebarJavascriptDesignModel(),
+      '/typora/': sidebarSummary(),
     },
   },
 })
 
 function nav() {
   return [
+    {
+      text: '笔记',
+      link: '/typora/',
+      activeMatch: '/typora/',
+    },
     {
       text: '透视 HTTP 协议',
       link: '/http-protocol/',
@@ -87,6 +94,10 @@ function nav() {
         {
           text: 'vite',
           link: 'https://cn.vitejs.dev/',
+        },
+        {
+          text: 'vite中文版(大佬翻译)',
+          link: 'https://process1024.github.io/vitepress/',
         },
         {
           text: 'rollup',
