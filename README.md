@@ -10,6 +10,92 @@ VitePress 是 [VuePress](https://vuepress.vuejs.org/) 小兄弟, 基于 [Vite](h
 
 待补充
 
+## 进阶
+
+### 自定义首页
+
+vitepress 也是支持直接在 md 中写 vue 的，所以可以通过 vue 组件的形式，来自定义一套样式。
+
+```
+---
+layout: home
+---
+<home />
+<script setup>
+import home from './components/home.vue'
+</script>
+```
+
+### 自定义页面
+
+通过添加 `.vitepress/theme/index.js` 或 `.vitepress/theme/index.ts` 文件（“主题入口文件”）来启用自定义主题。
+
+```
+import MyLayout from './layout.vue'
+import DefaultTheme from 'vitepress/theme'
+
+export default {
+  ...DefaultTheme,
+  Layout: MyLayout,
+  // NotFound: () => 'custom 404',
+  enhanceApp({ app, router, siteData }) {
+    // app is the Vue 3 app instance from `createApp()`.
+    // router is VitePress' custom router. `siteData` is
+    // a `ref` of current site-level metadata.
+    console.log(app, '>>>>>')
+  },
+  setup() {
+    // this function will be executed inside VitePressApp's
+    // setup hook. all composition APIs are available here.
+  },
+}
+```
+
+默认主题 `<Layout/>` 组件有一些插槽，可用于在页面的某些位置注入内容。
+
+```
+<script setup>
+import DefaultTheme from 'vitepress/theme'
+import { useData } from 'vitepress'
+
+const { Layout } = DefaultTheme
+const { frontmatter } = useData()
+
+console.log(frontmatter.value)
+</script>
+
+<template>
+  <Layout>
+    <template #doc-before>
+      文档前面添加内容
+      {{frontmatter}}
+    </template>
+    <template #doc-after>
+      文档后面添加内容
+      {{frontmatter}}
+    </template>
+  </Layout>
+</template>
+
+<style>
+.page-info {
+  font-size: 13px;
+  color: #7f7f7f;
+  margin-right: 10px;
+}
+</style>
+```
+
+## 打包
+
+文档多了打包速度肉眼可见的慢的。。
+
+```
+✓ building client + server bundles...
+✓ rendering pages...
+build complete in 77.26s.
+```
+
 ## 部署
 
 https://vitepress.vuejs.org/guide/deploying
@@ -69,12 +155,10 @@ build error:
 ```
 
 > shiki 定位发现是这个的问题
-
-```
- ```http 
-  http://www.chrono.com/18-2
- ```
-```
+>
+>  ```http
+>   http://www.chrono.com/18-2
+>  ```
 
 打包时会以为这是一个http语言的代码块
 
@@ -83,7 +167,7 @@ build error:
 ```
 (!) Found dead link ./01/index in file E:/code/myProject/vitepress/docs/http-protocol/README.md
 If it is intended, you can use:
-    <a href="./01/index" target="_blank" rel="noreferrer">./01/index</a>
+<a href="./01/index" target="_blank" rel="noreferrer">./01/index</a>
 \ building client + server bundles...[vitepress] One or more pages contain dead links.
 ✖ building client + server bundles...
 ```
@@ -93,18 +177,25 @@ If it is intended, you can use:
 -  Error: One or more pages contain dead links.
 
 ```
-(!) Found dead link ./lib/Less in file E:/code/myProject/vitepress/docs/typora/00summary/02前端项目流程.md
+(!) Found dead link ./lib/Less in file E:/code/myProject/vitepress/docs/typora/00summary/02 前端项目流程.md
 If it is intended, you can use:
-    <a href="./lib/Less" target="_blank" rel="noreferrer">./lib/Less</a>
+<a href="./lib/Less" target="_blank" rel="noreferrer">./lib/Less</a>
 ```
 
 md文档中的`[打开文件夹](./lib/JS)`无法解析
 
-- Error [ERR_MODULE_NOT_FOUND]: Cannot find module 
+- Error [ERR_MODULE_NOT_FOUND]: Cannot find module
 
 ```
-'E:\code\myProject\vitepress\docs\.vitepress\.temp\typora_12VueCode_31添加全局$router属性.md.js'
+'E:\code\myProject\vitepress\docs\.vitepress\.temp\typora_12VueCode_31 添加全局$router 属性.md.js'
 imported from E:\code\myProject\vitepress\node_modules\vitepress\dist\node\serve-1b26f7f9.js
 ```
 
 感觉是文档标题中有`$`导致的，删除后就没事了
+
+
+
+## vitepress版本问题
+
+当前版本`"vitepress": "^1.0.0-alpha.13"` `sidebar`必须含有`items`属性
+

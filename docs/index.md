@@ -32,3 +32,8 @@ features:
     title: Fully static yet still dynamic
     details: 用真正的 SSG + SPA 体系结构. 静态加载页, but engage users with 100% interactivity from there.
 ---
+
+<home />
+<script setup>
+import home from './components/home.vue'
+</script>

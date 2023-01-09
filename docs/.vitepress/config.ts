@@ -4,6 +4,7 @@ import sidebarHttpProtocol from './sidebarHttpProtocol'
 import sidebarFrontSpec from './sidebarFrontSpec'
 import sidebarJavascriptDesignModel from './sidebarJavascriptDesignModel'
 import sidebarSummary from './sidebarSummary'
+import sidebarRoadToReact from './sidebarRoadToReact'
 
 export default defineConfig({
   title: 'vitepress-demo',
@@ -49,6 +50,7 @@ export default defineConfig({
       '/front-spec/': sidebarFrontSpec(),
       '/javascript-design-model/': sidebarJavascriptDesignModel(),
       '/typora/': sidebarSummary(),
+      '/road-to-react-chinese/': sidebarRoadToReact(),
     },
   },
 })
@@ -74,6 +76,11 @@ function nav() {
       text: '设计模式',
       link: '/javascript-design-model/',
       activeMatch: '/javascript-design-model',
+    },
+    {
+      text: 'React之路',
+      link: '/road-to-react-chinese/',
+      activeMatch: '/road-to-react-chinese/',
     },
     {
       text: '关于',
