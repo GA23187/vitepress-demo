@@ -86,6 +86,18 @@ console.log(frontmatter.value)
 </style>
 ```
 
+### 环境变量
+
+- 安装`cross-env` 来设置运行环境变量
+
+  ```
+  yarn add -D cross-env @types/node
+  ```
+
+- 修改`package.json`文件，`script`添加`"vercel:pulish": "cross-env PULISH_ENV=production vitepress build docs"`
+
+
+
 ## 打包
 
 文档多了打包速度肉眼可见的慢的。。
@@ -140,6 +152,14 @@ https://vitepress.vuejs.org/guide/deploying
 3. 提交到`master`分支
 
 4. 在对应 GitHub 仓库的 setting 中的 pages 选择`gh-pages`分支作为 GitHub Pages source，保存后就会自动部署了
+
+### 部署到vercel
+
+> 如果是单独部署到vercel，记得把config中的base设置为/即可。
+
+1. 登录https://vercel.com/，没有账号的用github账号就可以注册一个
+2. 新建一个`project` https://vercel.com/new 选择你的仓库如果搜索不到，点击下面的调整github app permissons调整一下权限就可以了。
+3. 配置
 
 ### 打包错误
 
@@ -199,3 +219,8 @@ imported from E:\code\myProject\vitepress\node_modules\vitepress\dist\node\serve
 
 当前版本`"vitepress": "^1.0.0-alpha.13"` `sidebar`必须含有`items`属性
 
+
+
+## 补充
+
+- 大佬翻译的中文地址 https://process1024.github.io/vitepress/

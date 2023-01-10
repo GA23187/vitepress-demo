@@ -9,7 +9,8 @@ export default {
     // app is the Vue 3 app instance from `createApp()`.
     // router is VitePress' custom router. `siteData` is
     // a `ref` of current site-level metadata.
-    console.log(app, '>>>>>')
+    // 打包时这里会一直运行，故不要console
+    // console.log(app, '>>>>>')
   },
   setup() {
     // this function will be executed inside VitePressApp's

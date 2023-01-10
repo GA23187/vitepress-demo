@@ -6,10 +6,12 @@ import sidebarJavascriptDesignModel from './sidebarJavascriptDesignModel'
 import sidebarSummary from './sidebarSummary'
 import sidebarRoadToReact from './sidebarRoadToReact'
 
+console.log(process.env.PULISH_ENV, 'process.env.PULISH_ENV')
+
 export default defineConfig({
   title: 'vitepress-demo',
   description: '一个vitepree-demo....',
-  base: '/vitepress-demo/',
+  base: process.env.PULISH_ENV === 'production' ? '/' : '/vitepress-demo/',
   lang: 'en-US',
   head: [['link', { rel: 'icon', href: 'favicon.ico' }]],
   markdown: {
