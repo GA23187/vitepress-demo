@@ -98,6 +98,18 @@ console.log(frontmatter.value)
 
 
 
+### 注意
+
+要在内联代码片段或纯文本中展示 mustaches 或特定的 Vue 语法，你需要使用 `v-pre` 自定义容器包装一个段落
+
+```
+::: v-pre
+`{{ This will be displayed as-is }}`
+:::
+```
+
+不然就是被当作可以执行的vue语法了
+
 ## 打包
 
 文档多了打包速度肉眼可见的慢的。。
@@ -112,7 +124,7 @@ build complete in 77.26s.
 
 https://vitepress.vuejs.org/guide/deploying
 
-### 部署到 GitHub Pages
+### 部署到GitHub Pages
 
 1. 配置`docs/.vitepress/config.js`中的`base`，如果您计划将站点部署到 https://foo.github.io/bar/ ，那么应该将 base 设置为`/bar/`。它应该始终以斜杠开始和结束。
 
@@ -153,7 +165,7 @@ https://vitepress.vuejs.org/guide/deploying
 
 4. 在对应 GitHub 仓库的 setting 中的 pages 选择`gh-pages`分支作为 GitHub Pages source，保存后就会自动部署了
 
-### 部署到vercel
+### 部署到Vercel
 
 > 如果是单独部署到vercel，记得把config中的base设置为/即可。
 
@@ -213,7 +225,7 @@ imported from E:\code\myProject\vitepress\node_modules\vitepress\dist\node\serve
 
 感觉是文档标题中有`$`导致的，删除后就没事了
 
-
+- 文件名好像不能有`+`号，不然打包后会提示找不到` Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'E:\code\myProject\vitepress-demo\docs\.vitepress\.temp\advanced-core-knowledage-front-end_javascript-yu-yan-jin-jie_008-yi-bu-bu-ke-pa-si-ji-ying-bei+shi-jian-na-xia-xia.md.js'`
 
 ## vitepress版本问题
 
@@ -224,3 +236,4 @@ imported from E:\code\myProject\vitepress\node_modules\vitepress\dist\node\serve
 ## 补充
 
 - 大佬翻译的中文地址 https://process1024.github.io/vitepress/
+- vite侧边导航自动生成 https://free_pan.gitee.io/freepan-blog/articles/06-%E6%9D%82%E9%A1%B9%E4%B8%8E%E6%84%9F%E8%A7%A6/%E6%9D%82%E9%A1%B9%E4%B8%8E%E6%84%9F%E8%A7%A6/vitepress%E4%BD%BF%E7%94%A8.html#%E4%BE%A7%E8%BE%B9%E5%AF%BC%E8%88%AA

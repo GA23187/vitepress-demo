@@ -5,9 +5,13 @@ import sidebarFrontSpec from './sidebarFrontSpec'
 import sidebarJavascriptDesignModel from './sidebarJavascriptDesignModel'
 import sidebarSummary from './sidebarSummary'
 import sidebarRoadToReact from './sidebarRoadToReact'
+import sidebarAdvancedCoreKnowledage from './sidebarAdvancedCoreKnowledage'
+import { getSidebarData } from '../../script/generateSideBar'
 
 console.log(process.env.PULISH_ENV, 'process.env.PULISH_ENV')
-
+// getSidebarData({
+//   dirName: 'advanced-core-knowledage-front-end',
+// })
 export default defineConfig({
   title: 'vitepress-demo',
   description: '一个vitepree-demo....',
@@ -53,6 +57,7 @@ export default defineConfig({
       '/javascript-design-model/': sidebarJavascriptDesignModel(),
       '/typora/': sidebarSummary(),
       '/road-to-react-chinese/': sidebarRoadToReact(),
+      '/advanced-core-knowledage-front-end/': sidebarAdvancedCoreKnowledage(),
     },
   },
 })
@@ -83,6 +88,11 @@ function nav() {
       text: 'React之路',
       link: '/road-to-react-chinese/',
       activeMatch: '/road-to-react-chinese/',
+    },
+    {
+      text: '前端进阶',
+      link: '/advanced-core-knowledage-front-end/',
+      activeMatch: '/advanced-core-knowledage-front-end/',
     },
     {
       text: '关于',
