@@ -30,7 +30,7 @@ jobs:
         with:
           src: github/GA23187 # 被同步的源端账户名
           dst: gitee/DuKouHu # 同步到的目的端账户名
-          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }} # 目的端的私钥 需要在同步端新建及github下Settings-> Secrets 配置 GITEE_RSA_PRIVATE_KEY
+          dst_key: ${{ secrets.GITEE_RSA_PRIVATE_KEY }} # 目的端的私钥 需要在同步端新建及github下Settings-> Secrets 配置 GITEE_RSA_PRIVATE_KEY
           dst_token: ${{ secrets.GITEE_TOKEN }} # 目的端的tokens 及gitee下私人令牌
           static_list: vitepress-demo # 表示单一仓库同步
           force_update: true # 启用 git push -f 强制同步

@@ -63,11 +63,6 @@ export default defineConfig({
 function nav() {
   return [
     {
-      text: '笔记',
-      link: '/typora/',
-      activeMatch: '/typora/',
-    },
-    {
       text: '透视 HTTP 协议',
       link: '/http-protocol/',
       activeMatch: '/http-protocol/',

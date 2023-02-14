@@ -5,7 +5,7 @@ import { useData } from 'vitepress'
 const { Layout } = DefaultTheme
 const { frontmatter } = useData() //这里的frontmatter就是各个md文件中自己写在最上面的东西
 
-console.log(frontmatter.value)
+// console.log(frontmatter.value)
 </script>
 
 <template>
