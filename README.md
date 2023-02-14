@@ -10,6 +10,41 @@ VitePress 是 [VuePress](https://vuepress.vuejs.org/) 小兄弟, 基于 [Vite](h
 
 待补充
 
+### 全局组件
+
+> vuepress中`docs/.vuepress/components`: 该目录中的 Vue 组件将会被自动注册为全局组件
+
+vitepress中呢
+
+在 theme 中注册全局组件
+
+如果要在文档中的多个页面中使用组件，则可以在主题中全局注册它们（或作为默认 VitePress 主题扩展的一部分）
+
+在 `.vitepress/theme/index.js` 中，`enhanceApp` 函数接收 Vue `app` 实例
+
+```js
+import DefaultTheme from 'vitepress/theme'
+
+export default {
+  ...DefaultTheme,
+  enhanceApp({ app }) {
+    app.component('VueClickAwayExample', VueClickAwayExample)
+  }
+}
+```
+
+然后就可以在 markdown 文件里使用组件
+
+```md
+# Vue Click Away
+
+<VueClickAwayExample />
+```
+
+> 确保自定义组件的名称包含连字符或使用 PascalCase（大驼峰拼写）。否则，它将被视为内联元素并包裹在 `<p>` 标签中，这将会导致 HTML 渲染紊乱，因为 HTML 标准规定， `<p>` 标签中不允许放置任何块级元素。
+
+
+
 ## 进阶
 
 ### 自定义首页
