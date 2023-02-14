@@ -1,0 +1,60 @@
+import{_ as s,o as n,c as a,a as p}from"./app.a9f825fd.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[{"level":2,"title":"React Props","slug":"react-props","link":"#react-props","children":[{"level":3,"title":"\u7EC3\u4E60","slug":"\u7EC3\u4E60","link":"#\u7EC3\u4E60","children":[]}]}],"relativePath":"road-to-react-chinese/react-modern/props.md","lastUpdated":1676385096000}'),l={name:"road-to-react-chinese/react-modern/props.md"},e=p(`<h2 id="react-props" tabindex="-1">React Props <a class="header-anchor" href="#react-props" aria-hidden="true">#</a></h2><p>\u6211\u4EEC\u73B0\u5728\u628A <code>list</code> \u53D8\u91CF\u4F5C\u4E3A\u5F53\u524D\u5E94\u7528\u7684\u4E00\u4E2A\u5168\u5C40\u53D8\u91CF\u3002\u6211\u4EEC\u5728 App \u7EC4\u4EF6\u5185\u76F4\u63A5\u4ECE\u5168\u5C40\u4F5C\u7528\u57DF\u4F7F\u7528\u5B83\uFF0C\u5728 List \u7EC4\u4EF6\u5185\u540C\u6837\u8FD9\u6837\u4F7F\u7528\u3002\u5982\u679C\u4F60\u53EA\u6709\u4E00\u4E2A\u53D8\u91CF\u7684\u8BDD\u8FD9\u79CD\u65B9\u5F0F\u662F\u53EF\u884C\u7684\uFF0C\u4F46\u8FD9\u65E0\u6CD5\u6269\u5C55\u4E3A\u5728\u4E0D\u540C\u6587\u4EF6\u7684\u591A\u4E2A\u7EC4\u4EF6\u5185\u4F7F\u7528\u591A\u4E2A\u53D8\u91CF\u3002</p><p>\u901A\u8FC7\u4F7F\u7528\u6240\u8C13\u7684 props \uFF0C\u6211\u4EEC\u53EF\u4EE5\u628A\u53D8\u91CF\u4F5C\u4E3A\u4FE1\u606F\u4ECE\u4E00\u4E2A\u7EC4\u4EF6\u4F20\u7ED9\u53E6\u4E00\u4E2A\u7EC4\u4EF6\u3002\u5728\u4F7F\u7528 props \u4E4B\u524D\uFF0C\u6211\u4EEC\u8981\u5148\u628A list \u4ECE\u5168\u5C40\u4F5C\u7528\u57DF\u79FB\u81F3 App \u7EC4\u4EF6\u5185\u90E8\uFF0C\u5E76\u6309\u5B83\u7684\u5B9E\u9645\u9886\u57DF\u91CD\u547D\u540D\u3002</p><p title="src/App.js,lang=&quot;javascript&quot;"></p><div class="language- line-numbers-mode"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">const App = () =&gt; {</span></span>
+<span class="line"><span style="color:#A6ACCD;"># leanpub-start-insert</span></span>
+<span class="line"><span style="color:#A6ACCD;">  const stories = [</span></span>
+<span class="line"><span style="color:#A6ACCD;">    {</span></span>
+<span class="line"><span style="color:#A6ACCD;">      title: &#39;React&#39;,</span></span>
+<span class="line"><span style="color:#A6ACCD;">      url: &#39;https://reactjs.org/&#39;,</span></span>
+<span class="line"><span style="color:#A6ACCD;">      author: &#39;Jordan Walke&#39;,</span></span>
+<span class="line"><span style="color:#A6ACCD;">      num_comments: 3,</span></span>
+<span class="line"><span style="color:#A6ACCD;">      points: 4,</span></span>
+<span class="line"><span style="color:#A6ACCD;">      objectID: 0,</span></span>
+<span class="line"><span style="color:#A6ACCD;">    },</span></span>
+<span class="line"><span style="color:#A6ACCD;">    {</span></span>
+<span class="line"><span style="color:#A6ACCD;">      title: &#39;Redux&#39;,</span></span>
+<span class="line"><span style="color:#A6ACCD;">      url: &#39;https://redux.js.org/&#39;,</span></span>
+<span class="line"><span style="color:#A6ACCD;">      author: &#39;Dan Abramov, Andrew Clark&#39;,</span></span>
+<span class="line"><span style="color:#A6ACCD;">      num_comments: 2,</span></span>
+<span class="line"><span style="color:#A6ACCD;">      points: 5,</span></span>
+<span class="line"><span style="color:#A6ACCD;">      objectID: 1,</span></span>
+<span class="line"><span style="color:#A6ACCD;">    },</span></span>
+<span class="line"><span style="color:#A6ACCD;">  ];</span></span>
+<span class="line"><span style="color:#A6ACCD;"># leanpub-end-insert</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">  const handleChange = event =&gt; { ... };</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">  return ( ... );</span></span>
+<span class="line"><span style="color:#A6ACCD;">};</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><p>\u63A5\u4E0B\u6765\u6211\u4EEC\u5C06\u4F7F\u7528 <strong>React props</strong> \u6765\u628A\u8FD9\u4E2A\u6570\u7EC4\u4F20\u9012\u7ED9 List \u7EC4\u4EF6\uFF1A</p><p title="src/App.js,lang=&quot;javascript&quot;"></p><div class="language- line-numbers-mode"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;">const App = () =&gt; {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  const stories = [ ... ];</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">  const handleChange = event =&gt; { ... };</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">  return (</span></span>
+<span class="line"><span style="color:#A6ACCD;">    &lt;div&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">      &lt;h1&gt;My Hacker Stories&lt;/h1&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">      &lt;label htmlFor=&quot;search&quot;&gt;Search: &lt;/label&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">      &lt;input id=&quot;search&quot; type=&quot;text&quot; onChange={handleChange} /&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">      &lt;hr /&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"># leanpub-start-insert</span></span>
+<span class="line"><span style="color:#A6ACCD;">      &lt;List list={stories} /&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;"># leanpub-end-insert</span></span>
+<span class="line"><span style="color:#A6ACCD;">    &lt;/div&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  );</span></span>
+<span class="line"><span style="color:#A6ACCD;">};</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>\u8FD9\u4E2A\u53D8\u91CF\u5728 App \u7EC4\u4EF6\u4E2D\u88AB\u79F0\u4E3A <code>stories</code> \uFF0C\u5E76\u4E14\u6211\u4EEC\u628A\u5B83\u4EE5\u8FD9\u4E2A\u540D\u5B57\u4F20\u7ED9\u4E86 List \u7EC4\u4EF6\u3002\u7136\u800C\u5728 List \u7EC4\u4EF6\u5B9E\u4F8B\u5316\u65F6\uFF0C\u5B83\u88AB\u8D4B\u503C\u7ED9\u4E86 <code>list</code> \u5C5E\u6027\u3002\u6211\u4EEC\u5728 List \u7EC4\u4EF6\u7684\u51FD\u6570\u7B7E\u540D\u4E2D\u901A\u8FC7 <code>props</code> \u5BF9\u8C61\u4E2D\u7684 <code>list</code> \u8BBF\u95EE\u5B83\u3002</p><p title="src/App.js,lang=&quot;javascript&quot;"></p><div class="language- line-numbers-mode"><button class="copy"></button><span class="lang"></span><pre><code><span class="line"><span style="color:#A6ACCD;"># leanpub-start-insert</span></span>
+<span class="line"><span style="color:#A6ACCD;">const List = props =&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  props.list.map(item =&gt; (</span></span>
+<span class="line"><span style="color:#A6ACCD;"># leanpub-end-insert</span></span>
+<span class="line"><span style="color:#A6ACCD;">    &lt;div key={item.objectID}&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">      &lt;span&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">        &lt;a href={item.url}&gt;{item.title}&lt;/a&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">      &lt;/span&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">      &lt;span&gt;{item.author}&lt;/span&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">      &lt;span&gt;{item.num_comments}&lt;/span&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">      &lt;span&gt;{item.points}&lt;/span&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">    &lt;/div&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  ));</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>\u901A\u8FC7\u8FD9\u6837\u64CD\u4F5C\uFF0C\u6211\u4EEC\u5DF2\u7ECF\u907F\u514D\u4E86 list/stories \u53D8\u91CF\u5728 App \u7EC4\u4EF6\u5185\u6C61\u67D3\u5168\u5C40\u4F5C\u7528\u57DF\u3002\u56E0\u4E3A <code>stories</code> \u4E0D\u662F\u5728 App \u7EC4\u4EF6\u88AB\u76F4\u63A5\u4F7F\u7528\u7684\uFF0C\u800C\u662F\u5728\u5B83\u7684\u5176\u4E2D\u4E00\u4E2A\u5B50\u7EC4\u4EF6\u5185\uFF0C\u6211\u4EEC\u628A\u5B83\u4F5C\u4E3A props \u4F20\u7ED9\u4E86 List \u7EC4\u4EF6\u3002\u7136\u540E\u6211\u4EEC\u53EF\u4EE5\u901A\u8FC7\u51FD\u6570\u7B7E\u540D\u7684\u7B2C\u4E00\u4E2A\u53C2\u6570 <code>props</code> \u6765\u8BBF\u95EE\u5B83\u3002</p><h3 id="\u7EC3\u4E60" tabindex="-1">\u7EC3\u4E60 <a class="header-anchor" href="#\u7EC3\u4E60" aria-hidden="true">#</a></h3><ul><li>\u68C0\u67E5<a href="https://codesandbox.io/s/github/the-road-to-learn-react/hacker-stories/tree/hs/React-Props" target="_blank" rel="noreferrer">\u4E0A\u4E00\u8282\u7684\u6E90\u7801</a>\u3002</li><li>\u786E\u8BA4<a href="https://github.com/the-road-to-learn-react/hacker-stories/compare/hs/Handler-Function-in-JSX...hs/React-Props?expand=1" target="_blank" rel="noreferrer">\u4E0A\u4E00\u8282\u4E4B\u540E\u7684\u53D8\u66F4</a>\u3002</li><li>\u9605\u8BFB\u66F4\u591A\u5173\u4E8E<a href="https://www.robinwieruch.de/react-pass-props-to-component" target="_blank" rel="noreferrer">\u5982\u4F55\u5411 React \u7EC4\u4EF6\u4F20\u9012 props</a>\u3002</li></ul>`,14),r=[e];function t(c,o,i,b,A,C){return n(),a("div",null,r)}const d=s(l,[["render",t]]);export{m as __pageData,d as default};
