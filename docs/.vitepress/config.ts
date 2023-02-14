@@ -3,7 +3,6 @@ import { version } from '../../package.json'
 import sidebarHttpProtocol from './sidebarHttpProtocol'
 import sidebarFrontSpec from './sidebarFrontSpec'
 import sidebarJavascriptDesignModel from './sidebarJavascriptDesignModel'
-import sidebarSummary from './sidebarSummary'
 import sidebarRoadToReact from './sidebarRoadToReact'
 import sidebarAdvancedCoreKnowledage from './sidebarAdvancedCoreKnowledage'
 import { getSidebarData } from '../../script/generateSideBar'
@@ -55,7 +54,6 @@ export default defineConfig({
       '/http-protocol/': sidebarHttpProtocol(),
       '/front-spec/': sidebarFrontSpec(),
       '/javascript-design-model/': sidebarJavascriptDesignModel(),
-      '/typora/': sidebarSummary(),
       '/road-to-react-chinese/': sidebarRoadToReact(),
       '/advanced-core-knowledage-front-end/': sidebarAdvancedCoreKnowledage(),
     },
