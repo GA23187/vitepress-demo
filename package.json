@@ -18,5 +18,9 @@
     "inquirer": "^9.1.4",
     "vitepress": "^1.0.0-alpha.13",
     "vue": "^3.2.38"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.0.10",
+    "element-plus": "^2.2.30"
   }
 }

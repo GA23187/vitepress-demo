@@ -131,7 +131,77 @@ console.log(frontmatter.value)
 
 - 修改`package.json`文件，`script`添加`"vercel:pulish": "cross-env PULISH_ENV=production vitepress build docs"`
 
-### 注意
+
+
+### 引入`element-plus`
+
+- 安装
+
+  ```
+   yarn add element-plus
+   yarn add @element-plus/icons-vue
+  ```
+
+- 在`.vitepress/theme/index.ts`中注册
+
+  > 这里是全部注册 可以按需引入减少打包体积
+
+  ```js
+  import ElementPlus from 'element-plus'
+  import 'element-plus/dist/index.css'
+  import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+  
+  export default {
+    ...DefaultTheme,
+    Layout: MyLayout,
+    // NotFound: () => 'custom 404',
+    enhanceApp({ app, router, siteData }) {
+      // 注册element-plus
+      app.use(ElementPlus)
+      // 注册所有图标
+      for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+        app.component(key, component)
+      }
+    },
+  }
+  ```
+
+- 使用
+
+  ```md
+  ---
+  prev: '自定义上下页链接'
+  tags: [1, 2]
+  date: 2022-01-09
+  author: tiger
+  ---
+  
+  # 测试 vue 组件
+  
+  <script setup>
+  import CustomComponent from '../components/CustomComponent.vue'
+  import { ElButton } from 'element-plus'
+  import { Delete } from '@element-plus/icons-vue'
+  </script>
+  
+  This is a .md using a custom component
+  
+  <CustomComponent />
+  
+  <el-button type="primary">Primary</el-button>
+  <el-button type="success">Success</el-button>
+  <el-button type="danger" :icon="Delete" circle />
+  ```
+
+  > 按需引入 需要借助一些插件，所以需要添加一个`vite.config.ts`配置文件，在`docs/vite.config.ts`，和script中指定的运行根目录有关`vitepress dev docs`
+  >
+  > 后续就按`element-plus`官网来，但是我这里只尝试了**手动导入**方式，安装了`unplugin-element-plus`插件，但是结果样式还是没有引入进来
+  
+- 参考
+
+  - https://github.com/vuejs/vitepress/issues/282
+
+## 注意
 
 要在内联代码片段或纯文本中展示 mustaches 或特定的 Vue 语法，你需要使用 `v-pre` 自定义容器包装一个段落
 
