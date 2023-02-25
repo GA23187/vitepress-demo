@@ -9,6 +9,6 @@
     "skipLibCheck": true,
     "resolveJsonModule": true
   },
-  "include": ["script", "docs/**/*.ts"],
+  "include": ["script", "docs/**/*.ts", "docs/**/*.vue"],
   "exclude": []
 }

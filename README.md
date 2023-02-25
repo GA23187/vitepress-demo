@@ -201,6 +201,11 @@ console.log(frontmatter.value)
 
   - https://github.com/vuejs/vitepress/issues/282
 
+### 引入`pdf`展示
+
+- 方法一: iframe
+- 方法二: 使用`pdfjs`之类的插件（TODO）
+
 ## 注意
 
 要在内联代码片段或纯文本中展示 mustaches 或特定的 Vue 语法，你需要使用 `v-pre` 自定义容器包装一个段落
